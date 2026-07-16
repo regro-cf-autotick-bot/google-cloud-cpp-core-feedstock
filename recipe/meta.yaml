@@ -1,4 +1,4 @@
-{% set version = "3.6.0" %}
+{% set version = "3.7.0" %}
 
 package:
   name: google-cloud-cpp-core
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/googleapis/google-cloud-cpp/archive/v{{ version }}.tar.gz
-  sha256: 57d754883a4b4bead60e40f1db5e8a44ba2aa17b605eef56d85234839d5819a3
+  sha256: 821367f21ec536431bf4fb5dc709a42794465506d7d3f8be40d52d493bcfdd06
   patches:
     - patches/0001-Adapt-for-OpenTelemetry-1.25.patch
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
