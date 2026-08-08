@@ -1,4 +1,4 @@
-{% set version = "3.7.0" %}
+{% set version = "3.8.0" %}
 
 package:
   name: google-cloud-cpp-core
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/googleapis/google-cloud-cpp/archive/v{{ version }}.tar.gz
-  sha256: 821367f21ec536431bf4fb5dc709a42794465506d7d3f8be40d52d493bcfdd06
+  sha256: d0a3a670f468ddd059ffb39780df958b3ffaca12ebcae63193072b759b95add2
   patches:
     - patches/0001-Adapt-for-OpenTelemetry-1.25.patch
 
@@ -35,7 +35,7 @@ requirements:
 
 outputs:
   - name: libgoogle-cloud
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -83,7 +83,7 @@ outputs:
         - if exist %LIBRARY_LIB%\cmake\google_cloud_cpp_common\google_cloud_cpp_common-config.cmake exit 1  # [win]
 
   - name: libgoogle-cloud-devel
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -139,7 +139,7 @@ outputs:
         - tests/quickstart.cc
 
   - name: libgoogle-cloud-oauth2
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -180,7 +180,7 @@ outputs:
         - if exist %LIBRARY_LIB%\cmake\google_cloud_cpp_oauth2\google_cloud_cpp_oauth2-config.cmake exit 1  # [win]
 
   - name: libgoogle-cloud-opentelemetry
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -224,7 +224,7 @@ outputs:
         - if exist %LIBRARY_LIB%\cmake\google_cloud_cpp_opentelemetry\google_cloud_cpp_opentelemetry-config.cmake exit 1  # [win]
 
   - name: libgoogle-cloud-bigtable
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -268,7 +268,7 @@ outputs:
         - if exist %LIBRARY_LIB%\cmake\google_cloud_cpp_bigtable\google_cloud_cpp_bigtable-config.cmake exit 1  # [win]
 
   - name: libgoogle-cloud-logging
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -309,7 +309,7 @@ outputs:
         - if exist %LIBRARY_LIB%\cmake\google_cloud_cpp_logging\google_cloud_cpp_logging-config.cmake exit 1  # [win]
 
   - name: libgoogle-cloud-monitoring
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -350,7 +350,7 @@ outputs:
         - if exist %LIBRARY_LIB%\cmake\google_cloud_cpp_monitoring\google_cloud_cpp_monitoring-config.cmake exit 1  # [win]
 
   - name: libgoogle-cloud-pubsub
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -391,7 +391,7 @@ outputs:
         - if exist %LIBRARY_LIB%\cmake\google_cloud_cpp_pubsub\google_cloud_cpp_pubsub-config.cmake exit 1  # [win]
 
   - name: libgoogle-cloud-spanner
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -432,7 +432,7 @@ outputs:
         - if exist %LIBRARY_LIB%\cmake\google_cloud_cpp_spanner\google_cloud_cpp_spanner-config.cmake exit 1  # [win]
 
   - name: libgoogle-cloud-trace
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -473,7 +473,7 @@ outputs:
         - if exist %LIBRARY_LIB%\cmake\google_cloud_cpp_trace\google_cloud_cpp_trace-config.cmake exit 1  # [win]
 
   - name: libgoogle-cloud-oauth2-devel
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -509,7 +509,7 @@ outputs:
         - google/cloud/oauth2/quickstart/CMakeLists.txt
 
   - name: libgoogle-cloud-opentelemetry-devel
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -547,7 +547,7 @@ outputs:
         - google/cloud/opentelemetry/quickstart/CMakeLists.txt
 
   - name: libgoogle-cloud-bigtable-devel
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -585,7 +585,7 @@ outputs:
         - google/cloud/bigtable/quickstart/CMakeLists.txt
 
   - name: libgoogle-cloud-logging-devel
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -621,7 +621,7 @@ outputs:
         - google/cloud/logging/quickstart/CMakeLists.txt
 
   - name: libgoogle-cloud-monitoring-devel
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -657,7 +657,7 @@ outputs:
         - google/cloud/monitoring/quickstart/CMakeLists.txt
 
   - name: libgoogle-cloud-pubsub-devel
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -693,7 +693,7 @@ outputs:
         - google/cloud/pubsub/quickstart/CMakeLists.txt
 
   - name: libgoogle-cloud-spanner-devel
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -729,7 +729,7 @@ outputs:
         - google/cloud/spanner/quickstart/CMakeLists.txt
 
   - name: libgoogle-cloud-trace-devel
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -765,7 +765,7 @@ outputs:
         - google/cloud/trace/quickstart/CMakeLists.txt
 
   - name: libgoogle-cloud-iam
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -807,7 +807,7 @@ outputs:
         - if exist %LIBRARY_LIB%\cmake\google_cloud_cpp_iam\google_cloud_cpp_iam-config.cmake exit 1  # [win]
 
   - name: libgoogle-cloud-policytroubleshooter
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -849,7 +849,7 @@ outputs:
         - if exist %LIBRARY_LIB%\cmake\google_cloud_cpp_policytroubleshooter\google_cloud_cpp_policytroubleshooter-config.cmake exit 1  # [win]
 
   - name: libgoogle-cloud-iam-devel
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -887,7 +887,7 @@ outputs:
         - google/cloud/iam/quickstart/CMakeLists.txt
 
   - name: libgoogle-cloud-policytroubleshooter-devel
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -927,7 +927,7 @@ outputs:
   - name: libgoogle-cloud-storage
     # This cannot use the standard subpackages because it has different direct
     # dependencies: libcrc32c and libcurl being the most prominent ones.
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:
@@ -975,7 +975,7 @@ outputs:
   - name: libgoogle-cloud-storage-devel
     # This cannot use the standard subpackages because it has different direct
     # dependencies: libcrc32c and libcurl being the most prominent ones.
-    script: install-libgoogle-cloud.sh   # [unix]
+    script: install-libgoogle-cloud.sh  # [unix]
     script: install-libgoogle-cloud.bat  # [win]
     build:
       run_exports:

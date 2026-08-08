@@ -95,31 +95,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `libgoogle-cloud, libgoogle-cloud-bigtable, libgoogle-cloud-bigtable-devel, libgoogle-cloud-devel, libgoogle-cloud-iam, libgoogle-cloud-iam-devel, libgoogle-cloud-logging, libgoogle-cloud-logging-devel, libgoogle-cloud-monitoring, libgoogle-cloud-monitoring-devel, libgoogle-cloud-oauth2, libgoogle-cloud-oauth2-devel, libgoogle-cloud-opentelemetry, libgoogle-cloud-opentelemetry-devel, libgoogle-cloud-policytroubleshooter, libgoogle-cloud-policytroubleshooter-devel, libgoogle-cloud-pubsub, libgoogle-cloud-pubsub-devel, libgoogle-cloud-spanner, libgoogle-cloud-spanner-devel, libgoogle-cloud-storage, libgoogle-cloud-storage-devel, libgoogle-cloud-trace, libgoogle-cloud-trace-devel` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install libgoogle-cloud libgoogle-cloud-bigtable libgoogle-cloud-bigtable-devel libgoogle-cloud-devel libgoogle-cloud-iam libgoogle-cloud-iam-devel libgoogle-cloud-logging libgoogle-cloud-logging-devel libgoogle-cloud-monitoring libgoogle-cloud-monitoring-devel libgoogle-cloud-oauth2 libgoogle-cloud-oauth2-devel libgoogle-cloud-opentelemetry libgoogle-cloud-opentelemetry-devel libgoogle-cloud-policytroubleshooter libgoogle-cloud-policytroubleshooter-devel libgoogle-cloud-pubsub libgoogle-cloud-pubsub-devel libgoogle-cloud-spanner libgoogle-cloud-spanner-devel libgoogle-cloud-storage libgoogle-cloud-storage-devel libgoogle-cloud-trace libgoogle-cloud-trace-devel
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install libgoogle-cloud libgoogle-cloud-bigtable libgoogle-cloud-bigtable-devel libgoogle-cloud-devel libgoogle-cloud-iam libgoogle-cloud-iam-devel libgoogle-cloud-logging libgoogle-cloud-logging-devel libgoogle-cloud-monitoring libgoogle-cloud-monitoring-devel libgoogle-cloud-oauth2 libgoogle-cloud-oauth2-devel libgoogle-cloud-opentelemetry libgoogle-cloud-opentelemetry-devel libgoogle-cloud-policytroubleshooter libgoogle-cloud-policytroubleshooter-devel libgoogle-cloud-pubsub libgoogle-cloud-pubsub-devel libgoogle-cloud-spanner libgoogle-cloud-spanner-devel libgoogle-cloud-storage libgoogle-cloud-storage-devel libgoogle-cloud-trace libgoogle-cloud-trace-devel
 ```
 
-It is possible to list all of the versions of `libgoogle-cloud` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add libgoogle-cloud libgoogle-cloud-bigtable libgoogle-cloud-bigtable-devel libgoogle-cloud-devel libgoogle-cloud-iam libgoogle-cloud-iam-devel libgoogle-cloud-logging libgoogle-cloud-logging-devel libgoogle-cloud-monitoring libgoogle-cloud-monitoring-devel libgoogle-cloud-oauth2 libgoogle-cloud-oauth2-devel libgoogle-cloud-opentelemetry libgoogle-cloud-opentelemetry-devel libgoogle-cloud-policytroubleshooter libgoogle-cloud-policytroubleshooter-devel libgoogle-cloud-pubsub libgoogle-cloud-pubsub-devel libgoogle-cloud-spanner libgoogle-cloud-spanner-devel libgoogle-cloud-storage libgoogle-cloud-storage-devel libgoogle-cloud-trace libgoogle-cloud-trace-devel
+# for installing globally
+pixi global install libgoogle-cloud libgoogle-cloud-bigtable libgoogle-cloud-bigtable-devel libgoogle-cloud-devel libgoogle-cloud-iam libgoogle-cloud-iam-devel libgoogle-cloud-logging libgoogle-cloud-logging-devel libgoogle-cloud-monitoring libgoogle-cloud-monitoring-devel libgoogle-cloud-oauth2 libgoogle-cloud-oauth2-devel libgoogle-cloud-opentelemetry libgoogle-cloud-opentelemetry-devel libgoogle-cloud-policytroubleshooter libgoogle-cloud-policytroubleshooter-devel libgoogle-cloud-pubsub libgoogle-cloud-pubsub-devel libgoogle-cloud-spanner libgoogle-cloud-spanner-devel libgoogle-cloud-storage libgoogle-cloud-storage-devel libgoogle-cloud-trace libgoogle-cloud-trace-devel
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `libgoogle-cloud` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search libgoogle-cloud --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search libgoogle-cloud --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search libgoogle-cloud --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -131,6 +173,8 @@ mamba repoquery whoneeds libgoogle-cloud --channel conda-forge
 # List dependencies of `libgoogle-cloud`:
 mamba repoquery depends libgoogle-cloud --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
